@@ -1,0 +1,8 @@
+nav a.active {
+  text-decoration: underline;
+  font-weight: 600;
+}
+nav a {
+  text-decoration: none;
+  filter: opacity(10px);
+}

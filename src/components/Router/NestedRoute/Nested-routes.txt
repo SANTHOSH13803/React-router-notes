@@ -1,0 +1,14 @@
+1> When user navigate to Invalid routes we need to navigate it to "No page found".
+
+
+In App.js
+......
+<Route path='*' element ={<NotFound/>} />
+
+In the above line should be always in the last route,
+the '*' means its if no routes are found it takes the * route.
+
+
+2> NestedRoutes 
+    React can also navigate a portion of page to its 
+    corresponding other route.

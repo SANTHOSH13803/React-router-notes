@@ -1,0 +1,55 @@
+Lazy Loading 
+
+    -> It's a technique where components no required in home page
+    can be split in seperate code bundles and can be dowloaded only
+    when the user navigates to that page.
+    (Incrementally dowload the application).
+
+    -> It enchances performance and reduce load time.
+
+    -> In this example we used About as a lazy Loading component
+        What generally happen is when we open the home page all the data
+        including About,project pages get dowloaded, This affect the load time when
+        there is huge amount of data to handle.
+
+        What lazy loading does is it only download data when page is accessed.
+        i.e, only when about page is opened
+
+Where to use lazy Loading? 
+    -> If we have a huge amount of data bundles or module bundles are used in the application,
+    lazy lodaing comes in handy.
+
+How to use lazyLoading
+    step-1 : The component which we need to do lazyLoading should be a default export
+        i.e, export default ComponentName;
+
+    step-2: The component should be imported in below format
+        const LazyAbout = React.lazy(()=> import('./components/About))
+    
+    step-3: use it in Routes, wrap it with React.Suspence and you can give a fallback argument to it 
+        to show when its loading.
+        <Route path='about'
+         element={
+            <React.Suspence fallback='loading...'>
+                <LazyAbout/>
+            </React.Suspence>
+                }/>
+
+        NOTE : The fallback can be component also
+        React.Suspence is a feature for managing asynchronous operations in a React app.
+         It lets your components communicate to React that they're waiting for some data. 
+         It is important to note that Suspense is not a data fetching library like react-async, 
+         nor is it a way to manage state like Redux
+
+
+To test all this concepts use Developer tools in Chrome
+(Network tab shows the speed of rendering "main.chunk.js")
+To slow down the Network speed click of "No trottling" symbol and change the Network speed ,
+so you can see the fallback
+
+
+It does'nt reduce the code in app,
+But it reduces the amount of code that should be needed in intial load.
+
+In above case the About page bundle is only dowloaded when we navigate to About Route
+(it only downloads one time and stores it.)

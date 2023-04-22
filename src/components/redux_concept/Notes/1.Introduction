@@ -1,0 +1,52 @@
+What is "Redux" ? 
+    It's a library for managing state in Predictable way.
+
+    Predictable state container for JS apps.
+    Redux is used for JS (not only for React)
+
+    Redux is state conatiner 
+        It stores the state of your application,
+        It means all the application logic and UI logic
+        is stored in Redux file.
+    
+    Redux is Predictable
+        If we want manage global state of your application
+        in a Predictable way ,redux can help you.
+
+What is "Redux Toolkit"?
+    It's an official toolkit for redux
+    and standard way to write logic
+
+    It's an lib for efficient redux development
+
+Why "Redux Toolkit" over "Redux"? 
+    "Redux" is Great but have some shortcommings.
+        > Configuration redux in an app seems complicated.
+        > we need to install lot of packages to do redux something useful.
+        > Require too much boilerplate code.
+    
+    "Redux toolkit" serves as an abstraction over redux.
+        > It hides the difficult parts ensuring you have a good
+            developer experience.
+
+Explanation on "how to use React + Redux toolkit ?"
+    "React" and "Redux toolkit" are two independent libs.
+    To bind the libraries, we need to get knowledge on
+    "React-Redux" package(official package) to use redux in our application.
+            
+
+
+When should I use redux in my react application? 
+    It depends on various factors, but few are below things..
+        > When you have a large amount of application state that are needed in many places in the app
+        > The app state is updated frequently over time.
+        > The logic to update the state may be complex.
+        > The app has a medium or large-sized codebase, an might be worked on by many people.
+    
+    Not all application needs redux.
+
+
+The course structure:
+    1. Redux 
+    2. Redux Toolkit
+    3. React Redux

@@ -1,0 +1,24 @@
+
+1> NavLink (react-router-dom)
+== "NavLink" functionality is same like "Link" , NavLink adds a classname 'active' for the current page link 
+    It's is used for navbar purpose.
+
+    Syntax : <NavLink to='pathname'/>
+
+2> useNavigate (react-router-dom)
+    when we need to programatically navigate to other pages(like on button click)
+    eg: going to 'order successful' page on click on place order.
+
+    -> useNavigate hook returns a funtion, we need to pass the path to the funtion
+    
+    Syntax:
+        const navigate = useNavigate()
+        ....
+        navigate('about-page') //navigates to about page  
+    
+    Tip:
+        sometimes we need to navigate to the previous page,
+        to acheive it use below
+
+        Syntax: 
+            navigate(-1) //this allows us to navigate to before page

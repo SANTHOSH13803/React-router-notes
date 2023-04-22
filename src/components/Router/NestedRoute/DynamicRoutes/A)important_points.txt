@@ -1,0 +1,29 @@
+
+1> When we need to use params in routes use the below syntax
+    syntax :   
+        <Route path='path/:userId' element={<UserDetails />} />
+
+2> To access the params in the url use "useParams" hook (react-router-dom)
+    It returns key value pairs.
+
+    syntax : 
+        const params = useParams();
+        const userId = params.userId; //The name should be same as in Route
+
+3> Search Params (i.e, Query parameters)
+    useSearchParams gives to things like useState hooks,
+    but the functionality is different.
+    
+    how to invoke a query to url? 
+        onClick = {()=> setSearchParams({filterName : 'filterValue'})}
+        
+        To clear the filter pass empty object to setSearchParams in above line
+
+4> Absolute Links and Relative Links
+
+    In Absolute Links we write '/' then only it works
+    Whereas in Relative Links we don't write them.
+
+    the prefered way is Relative links , it avoids confusion while we are using 
+    nested routes.
+    
